@@ -1,0 +1,61 @@
+.main_container {
+  display: grid;
+  grid-column-gap: 20px;
+  grid-template-columns: 114px 1fr 1fr 114px;
+  grid-template-rows: 90px auto 90px;
+  grid-template-areas: "header  header header header" " . logo_content description . " "footer  footer footer footer";
+  margin: 0px;
+  font-family: "Lucida Grande"; }
+  @media only screen and (max-width: 1400px) {
+    .main_container {
+      grid-template-columns: 57px 1fr 1fr 57px; } }
+  @media only screen and (max-width: 1210px) {
+    .main_container {
+      grid-template-areas: "header header header header" "logo_content logo_content logo_content logo_content" "description description description description" "footer footer footer footer";
+      grid-template-columns: 1fr; } }
+
+.header {
+  grid-area: header; }
+
+.logo_content {
+  grid-area: logo_content; }
+
+.logo {
+  display: flex; }
+  @media only screen and (max-width: 530px) {
+    .logo {
+      display: block; } }
+
+.logo_text {
+  font-size: 21px; }
+  .logo_text > p {
+    margin: 0px; }
+
+#kappnav-title {
+  font-size: 72px;
+  font-weight: bold;
+  line-height: 85px;
+  color: #474747; }
+
+.description {
+  grid-area: description;
+  font-size: 24px;
+  color: #393939; }
+
+.button {
+  height: 60px;
+  width: 208px;
+  border-radius: 8px;
+  background-color: #28ABE3;
+  font-family: "Arial Rounded MT Bold";
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: -0.17px;
+  line-height: 56px;
+  margin-top: 36px; }
+  .button a {
+    text-decoration: none;
+    color: #FFFFFF; }
+
+.footer {
+  grid-area: footer; }
