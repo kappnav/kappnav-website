@@ -5,7 +5,7 @@
   grid-template-rows: 90px auto 90px;
   grid-template-areas: "header  header header header" " . logo_content description . " "footer  footer footer footer";
   margin: 0px;
-  font-family: "Lucida Grande"; }
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", sans-serif; }
   @media only screen and (max-width: 1400px) {
     .main_container {
       grid-template-columns: 57px 1fr 1fr 57px; } }
@@ -25,6 +25,10 @@
   @media only screen and (max-width: 530px) {
     .logo {
       display: block; } }
+
+.logo_svg {
+  height: 144px;
+  width: 169px; }
 
 .logo_text {
   font-size: 21px; }
@@ -47,7 +51,6 @@
   width: 208px;
   border-radius: 8px;
   background-color: #28ABE3;
-  font-family: "Arial Rounded MT Bold";
   font-size: 24px;
   text-align: center;
   letter-spacing: -0.17px;
