@@ -13,8 +13,8 @@
     " . logo_content description . "
     "footer  footer footer footer";
     margin: 0px;
-    font-family: "Lucida Grande";
-
+    font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+    
     @media only screen and (max-width: 1400px)  {
         grid-template-columns: 57px 1fr 1fr 57px;
     }
@@ -40,10 +40,16 @@
 
 .logo {
     display: flex;
-    
+
     @media only screen and (max-width: 530px)  {
         display: block;
     }
+
+}
+
+.logo_svg {
+    height: 144px;
+    width: 169px;
 }
 
 .logo_text {
@@ -54,27 +60,26 @@
  }
 
  #kappnav-title {
-    font-size: 72px;    
-    font-weight: bold;    
+    font-size: 72px;
+    font-weight: bold;
     line-height: 85px;
     color: #474747
 }
-  
+
 .description {
     grid-area: description;
-    font-size: 24px;    
+    font-size: 24px;
     color: #393939;
 }
 
 .button {
-    height: 60px;    
-    width: 208px;    
-    border-radius: 8px;    
+    height: 60px;
+    width: 208px;
+    border-radius: 8px;
     background-color: #28ABE3;
-    font-family: "Arial Rounded MT Bold";    
     font-size: 24px;
     text-align: center;
-    letter-spacing: -0.17px;  
+    letter-spacing: -0.17px;
     line-height: 56px;
     margin-top: 36px;
 
@@ -82,7 +87,7 @@
         text-decoration: none;
         color: #FFFFFF;
     }
-}  
+}
 .footer {
     grid-area: footer;
 }

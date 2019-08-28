@@ -8,7 +8,7 @@ layout: default
     <header class="header"></header>
     <section class="logo_content">
         <div class="logo">
-            <img src="graphics/kappnav-logo.svg" height="144px">
+            <img class="logo_svg" src="graphics/kappnav-logo.svg">
             <div class="logo_text">        
                 <p id="kappnav-title">kAppNav</p>
                 <p>Kubernetes Application Navigator</p>
@@ -26,6 +26,3 @@ layout: default
     </section>
     <footer class="footer"></footer>
 </div>
-
-
-
