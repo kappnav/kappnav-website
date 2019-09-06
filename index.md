@@ -12,14 +12,14 @@ layout: default
             </div>
         </div>
         <p>{{ site.description }}</p>
-        <div class="button" id="getting_started"><a href="https://github.com/kappnav/README">Get Started</a></div>
+        <div class="button" id="getting_started"><a href="https://github.com/kappnav/README" target="_blank" rel="noopener">Get Started</a></div>
     </section>
     <section class="graphic">
         <img class="triangles_svg" src="graphics/kappnav-graphic.svg" alt="kAppNav graphic">
     </section>
     <div class="info">
         <p>The Kubernetes Application Navigator is a tool that extends the Kubernetes® console to provide <b>display inspection, understanding, and navigation</b> through the deployed resources that comprise an application.</p>
-        <p>The Kubernetes Application Navigator uses the <a href="https://github.com/kubernetes-sigs/application/blob/master/config/crds/app_v1beta1_application.yaml">Application Custom Resource Definition (CRD)</a> from the <a href="https://github.com/kubernetes-sigs/application">Kubernetes Application SIG</a> as the basis for describing the applications.</p>
+        <p>The Kubernetes Application Navigator uses the <a href="https://github.com/kubernetes-sigs/application/blob/master/config/crds/app_v1beta1_application.yaml" target="_blank" rel="noopener">Application Custom Resource Definition (CRD)</a> from the <a href="https://github.com/kubernetes-sigs/application" target="_blank" rel="noopener">Kubernetes Application SIG</a> as the basis for describing the applications.</p>
     </div>
     <div class="customizable">
         <h1 class="customizable_title">Customizable</h1>

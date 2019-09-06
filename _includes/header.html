@@ -2,11 +2,11 @@
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}    
     {%- if page_paths -%}
-    <a href="https://kappnav.io/" target="_blank"><img class="logo_nav" src="graphics/kappnav-logo.svg" alt="kAppNav Logo for page header"></a>
+    <a href="https://kappnav.io/"><img class="logo_nav" src="graphics/kappnav-logo.svg" alt="kAppNav Logo for page header"></a>
     <span class="follow_icons">
-        <a class="nav_github_icon" href="https://github.com/kappnav" target="_blank"><img src="graphics/header-github-icon.svg" alt="Github icon in page header"></a>
-        <a class="nav_twitter_icon" href="https://twitter.com/Kabaneroio" target="_blank"><img src="graphics/header-twitter-icon.svg" alt="Twitter icon in page header"></a>
-        <a class="nav_slack_icon" href="https://ibm-cloud-tech.slack.com/messages/CJZCYTD0Q" target="_blank"><img src="graphics/header-slack-icon.svg" alt="Slack icon in page header"></a>
+        <a class="nav_github_icon" href="https://github.com/kappnav" target="_blank" rel="noopener"><img src="graphics/header-github-icon.svg" alt="Github icon in page header"></a>
+        <a class="nav_twitter_icon" href="https://twitter.com/Kabaneroio" target="_blank" rel="noopener"><img src="graphics/header-twitter-icon.svg" alt="Twitter icon in page header"></a>
+        <a class="nav_slack_icon" href="https://ibm-cloud-tech.slack.com/messages/CJZCYTD0Q" target="_blank" rel="noopener"><img src="graphics/header-slack-icon.svg" alt="Slack icon in page header"></a>
     </span>
     {%- endif -%}
 </header>
