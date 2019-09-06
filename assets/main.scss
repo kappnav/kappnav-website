@@ -1,47 +1,97 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
+#
 ---
 @charset "utf-8";
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+}
 
 .main_container {
     display: grid;
     grid-column-gap: 20px;
-    grid-template-columns: 114px 1fr 1fr 114px;
-    grid-template-rows: 90px auto 90px;
+    grid-template-columns: 1fr 598px 598px 1fr;
+    grid-template-rows: 58px auto 425px 540px 108px;
     grid-template-areas:
     "header  header header header"
-    " . logo_content description . "
+    " . logo_content graphic . "
+    "info info info info"
+    "customizable  customizable customizable customizable"
     "footer  footer footer footer";
     margin: 0px;
+    min-height: 100%;
     font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
-    
-    @media only screen and (max-width: 1400px)  {
-        grid-template-columns: 57px 1fr 1fr 57px;
-    }
+    font-size: 24px;
+    color: #393939;
 
-    @media only screen and (max-width: 1210px)  {
+    @media only screen and (max-width: 1250px)  {
         grid-template-areas:
-        "header header header header"
-        "logo_content logo_content logo_content logo_content"
-        "description description description description"
-        "footer footer footer footer";
-        grid-template-columns: 1fr;
+        "header header header"
+        " . logo_content . "
+        " . graphic ."
+        " . info . "
+        " . customizable . "
+        "footer footer footer";
+        grid-template-columns: auto 598px auto;
+        grid-template-rows: auto;
+        padding: 0px;
     }
 
 }
 
 .header {
     grid-area: header;
+    background-color: #FFFFFF;
+    box-shadow: 0 -6px 29px rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.logo_nav {
+    height: 30px;
+    padding: 16px 0px 15px 53px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.follow_icons {
+    float: right;
+    padding: 16px 0px 16px 0px;
+    height: 100%;
+    & > a > img {
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+.nav_github_icon, .nav_twitter_icon {
+    padding-right: 44px;
+}
+
+.nav_slack_icon {
+    padding-right: 27px;
 }
 
 .logo_content {
     grid-area: logo_content;
+    padding: 123px 37px 62px 0px;
+
+    @media only screen and (max-width: 1250px) {
+        padding-right: 0px;
+    }
+
 }
 
 .logo {
     display: flex;
-
-    @media only screen and (max-width: 530px)  {
+    
+    @media only screen and (max-width: 598px)  {
         display: block;
     }
 
@@ -54,40 +104,152 @@
 
 .logo_text {
     font-size: 21px;
+    padding-left: 29px;
     & > p {
-        margin: 0px;
+        margin: 0px;   
+    }
+
+    @media only screen and (max-width: 598px)  {
+        padding-left: 0px;
     }
  }
 
- #kappnav-title {
-    font-size: 72px;
-    font-weight: bold;
+#kappnav-title {
+    font-size: 72px;    
+    font-weight: bold;    
     line-height: 85px;
     color: #474747
 }
+  
+.graphic {
+    grid-area: graphic;
+    padding: 123px 0px 62px 118px;
+    text-align: right;
+    @media only screen and (max-width: 1250px)  {
+        padding: 123px 0px 93px 0px;
+        justify-self: center;
+        text-align: center;
+    }
+}
 
-.description {
-    grid-area: description;
-    font-size: 24px;
-    color: #393939;
+.triangles_svg {
+    height: 364px;
+    width: 480px;
 }
 
 .button {
-    height: 60px;
-    width: 208px;
-    border-radius: 8px;
-    background-color: #28ABE3;
-    font-size: 24px;
+    height: 60px;    
+    width: 208px;    
+    border-radius: 8px;    
+    background-color: rgb(34, 159, 212);
     text-align: center;
-    letter-spacing: -0.17px;
+    letter-spacing: -0.17px;  
     line-height: 56px;
     margin-top: 36px;
 
-    & a {
+    & > a {
         text-decoration: none;
         color: #FFFFFF;
     }
+}  
+
+.info {
+    grid-area: info;
+    grid-row: 3/4;
+    grid-column: 2/4;
+    line-height: 29px;	
+    text-align: center;
+    padding: 61px 0px 99px 0px;
+    border-bottom: 1px solid #555555;
+
+    @media only screen and (max-width: 1250px)  {
+        grid-row: 4/5;
+        grid-column: 2/3;
+    }
+
+    :first-child {
+        padding-bottom: 30px;
+    }
 }
+
+.customizable {
+    grid-area: customizable;
+    grid-row: 4/5;
+    grid-column: 2/4;
+    display: grid;
+    grid-column-gap: 60px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 152px auto;
+    grid-template-areas:
+    "customizable_title customizable_title customizable_title"
+    "resources actions applications";
+    /* border-bottom: 1px solid #555555; */
+
+    & > div > h3 {
+        font-size: 36px;
+        font-weight: 400;
+        letter-spacing: -0.26px;
+        line-height: 44px;
+        text-align: center;
+    }
+
+    & > div > p {
+        letter-spacing: -0.17px;
+        line-height: 29px;
+        text-align: center;
+    }
+
+    @media only screen and (max-width: 1250px)  {
+        grid-row: 5/6;
+        grid-column: 2/3;
+        justify-self: center;
+
+    }
+
+}
+
+.customizable_title {
+    grid-area: customizable_title;
+    font-size: 60px;
+    font-weight: 400;	
+    letter-spacing: -0.43px;	
+    line-height: 72px;
+    text-align: center;
+}
+
+.resources {
+    grid-area: resources;
+}
+
+.actions {
+    grid-area: actions;
+}
+
+.applications {
+    grid-area: applications;
+}
+
 .footer {
     grid-area: footer;
+    background-color: rgb(29, 167, 102);	
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+.footer_link {
+    display: inline-block;
+    height: 55px;
+    margin: 28px 0px 21px 0px;
+    & > a {
+        color: #FFFFFF;	
+        letter-spacing: -0.17px;	
+        line-height: 29px;
+        text-decoration: none;
+        padding: 15px 80px 15px 80px;
+        display: flex;
+    }
+}
+
+.right_border {
+    border-right: 2px solid #FFFFFF;    
 }
