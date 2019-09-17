@@ -39,16 +39,16 @@ layout: default
     <div class="built_on">
         <h1 class="builton_title">Built on open source</h1>
         <div class="go">
-            <a href="https://golang.org/" target="_blank">Go™</a>
+            <a href="https://golang.org/" target="_blank"><img src="graphics/Go-Logo_LightBlue.svg"></a>
         </div>
         <div class="kubernetes">
-            <a href="https://kubernetes.io/" target="_blank">Kubernetes®</a>
+            <a href="https://kubernetes.io/" target="_blank"><img src="graphics/kubernetes-logo.png"></a>
         </div>
         <div class="open_liberty">
-            <a href="https://openliberty.io" target="_blank">Open Liberty</a>
+            <a href="https://openliberty.io" target="_blank"><img src="graphics/open-liberty.png"></a>
         </div>
         <div class="node">
-            <a href="https://nodejs.org" target="_blank">Node.js</a>
+            <a href="https://nodejs.org" target="_blank"><img src="graphics/nodejs.png"></a>
         </div>
     </div>
     {%- include footer.html -%}
