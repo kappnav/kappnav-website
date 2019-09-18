@@ -11,8 +11,8 @@ layout: default
                 <p>Kubernetes Application Navigator</p>
             </div>
         </div>
-        <p>{{ site.description }}</p>
-        <div class="button" id="getting_started"><a href="https://github.com/kappnav/README" target="_blank" rel="noopener">Get Started</a></div>
+        <p class="site_desc">{{ site.description }}</p>
+        <a class="button" id="getting_started" href="https://github.com/kappnav/README" target="_blank" rel="noopener">Get Started</a>
     </section>
     <section class="graphic">
         <img class="triangles_svg" src="graphics/kappnav-graphic.svg" alt="kAppNav graphic">
@@ -34,6 +34,21 @@ layout: default
         <div class="applications">
             <h3>Applications</h3>
             <p>Create applications how you want and how you work. Use labels, expressions, and kinds to help automatically organize your applications and debug them.</p>
+        </div>
+    </div>
+    <div class="built_on">
+        <h1 class="builton_title">Built on open source</h1>
+        <div class="go">
+            <a href="https://golang.org/" target="_blank"><img src="graphics/Go-Logo_LightBlue.svg"></a>
+        </div>
+        <div class="kubernetes">
+            <a href="https://kubernetes.io/" target="_blank"><img src="graphics/kubernetes-logo.png"></a>
+        </div>
+        <div class="open_liberty">
+            <a href="https://openliberty.io" target="_blank"><img src="graphics/open-liberty.png"></a>
+        </div>
+        <div class="node">
+            <a href="https://nodejs.org" target="_blank"><img src="graphics/nodejs.png"></a>
         </div>
     </div>
     {%- include footer.html -%}
