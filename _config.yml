@@ -27,6 +27,8 @@ plugins:
   - octopress-minify-html
   - jekyll-assets
 
+google_tag_manager_id: GTM-KSL4WLN
+
 assets:
  compress:
    css: true
