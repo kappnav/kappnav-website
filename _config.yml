@@ -34,14 +34,12 @@ assets:
 
 minify_html: true
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+# Travis bundles all gems in the vendor directory on its build servers, 
+# which Jekyll will mistakenly read and explode on.
+exclude:
+  - vendor 
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - Rakefile
