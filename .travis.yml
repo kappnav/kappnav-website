@@ -1,0 +1,32 @@
+language: ruby
+
+rvm:
+  - 2.6.3
+
+install:
+ - bundle install
+
+script: ./scripts/cibuild.sh
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: _site
+  target_branch: master
+  on:
+    branch: source
+
+# branch whitelist, only for GitHub Pages
+branches:
+  only:
+  - source
+
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
+
+sudo: false # route your build to the container-based infrastructure for a faster build
+
+cache: bundler # caching bundler gem packages will speed up build
+
