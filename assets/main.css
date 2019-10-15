@@ -1,388 +1,161 @@
-html, body {
-  width: 100%;
-  height: 100%;
-  margin: 0px; }
+html, body { width: 100%; height: 100%; margin: 0px; }
 
-.main_container {
-  display: grid;
-  grid-column-gap: 20px;
-  grid-template-columns: 1fr 598px 598px 1fr;
-  grid-template-rows: 58px auto 320px 540px 385px 58px;
-  grid-template-areas: "header  header header header" " . logo_content graphic . " "info info info info" "customizable  customizable customizable customizable" "built_on built_on built_on built_on" "footer  footer footer footer";
-  margin: 0px;
-  min-height: 100%;
-  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
-  font-size: 24px;
-  color: #393939;
-  line-height: 29px; }
-  @media only screen and (max-width: 1250px) {
-    .main_container {
-      grid-template-areas: "header header header" " . logo_content . " " . graphic ." " . info . " " . customizable . " " . built_on . " "footer footer footer";
-      grid-template-columns: 80px auto 80px;
-      grid-template-rows: 58px repeat(5, auto) 58px;
-      padding: 0px; } }
-  @media only screen and (max-width: 698px) {
-    .main_container {
-      grid-template-columns: 20px auto 20px;
-      grid-template-rows: 56px repeat(5, auto) 56px;
-      grid-template-areas: "header header header" " . logo_content . " " . graphic . " ". info . " " . customizable . " " . built_on . " "footer footer footer";
-      grid-column-gap: 0px;
-      font-size: 20px;
-      line-height: 24px; } }
+.main_container { display: grid; grid-column-gap: 20px; grid-template-columns: 1fr 598px 598px 1fr; grid-template-rows: 58px auto 320px 540px 385px 58px; grid-template-areas: "header  header header header" " . logo_content graphic . " "info info info info" "customizable  customizable customizable customizable" "built_on built_on built_on built_on" "footer  footer footer footer"; margin: 0px; min-height: 100%; font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", sans-serif; font-size: 24px; color: #393939; line-height: 29px; }
 
-.header {
-  grid-area: header;
-  background-color: #FFFFFF;
-  box-shadow: 0 -6px 29px rgba(0, 0, 0, 0.5);
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0; }
+@media only screen and (max-width: 1250px) { .main_container { grid-template-areas: "header header header" " . logo_content . " " . graphic ." " . info . " " . customizable . " " . built_on . " "footer footer footer"; grid-template-columns: 80px auto 80px; grid-template-rows: 58px repeat(5, auto) 58px; padding: 0px; } }
 
-.logo_nav {
-  height: 30px;
-  padding: 16px 0px 15px 53px;
-  display: inline-block;
-  vertical-align: middle; }
-  @media only screen and (max-width: 598px) {
-    .logo_nav {
-      padding: 16px 0px 15px 10px; } }
+@media only screen and (max-width: 698px) { .main_container { grid-template-columns: 20px auto 20px; grid-template-rows: 56px repeat(5, auto) 56px; grid-template-areas: "header header header" " . logo_content . " " . graphic . " ". info . " " . customizable . " " . built_on . " "footer footer footer"; grid-column-gap: 0px; font-size: 20px; line-height: 24px; } }
 
-.header_title {
-  display: none;
-  vertical-align: middle; }
-  @media only screen and (max-width: 598px) {
-    .header_title {
-      display: inline; } }
+.header { grid-area: header; background-color: #FFFFFF; box-shadow: 0 -6px 29px rgba(0, 0, 0, 0.5); position: fixed; top: 0; right: 0; left: 0; }
 
-.social_icons {
-  float: right;
-  padding: 16px 0px 16px 0px;
-  height: 100%; }
-  .social_icons > a > img {
-    width: 25px;
-    height: 25px;
-    display: inline-block;
-    vertical-align: middle; }
-  @media only screen and (max-width: 598px) {
-    .social_icons {
-      display: none; } }
+.logo_nav { height: 30px; padding: 16px 0px 15px 53px; display: inline-block; vertical-align: middle; }
 
-.nav_github_icon, .nav_twitter_icon {
-  padding-right: 44px; }
+@media only screen and (max-width: 598px) { .logo_nav { padding: 16px 0px 15px 10px; } }
 
-.nav_slack_icon {
-  padding-right: 27px; }
+.header_title { display: none; vertical-align: middle; }
 
-.mobile_menu_button {
-  display: none;
-  height: 38px;
-  width: 54px;
-  border: 1px solid #E5E5E5;
-  border-radius: 2px;
-  float: right;
-  margin: 12px 16px 10px 0px;
-  background-color: #FFFFFF; }
-  .mobile_menu_button > div {
-    height: 2px;
-    width: 25px;
-    background-color: #979797;
-    margin: 4px 6px 4px 6px; }
-    @media only screen and (max-width: 420px) {
-      .mobile_menu_button > div {
-        margin: 4px 6px 4px 4px; } }
-  @media only screen and (max-width: 598px) {
-    .mobile_menu_button {
-      display: block; } }
+@media only screen and (max-width: 598px) { .header_title { display: inline; } }
 
-#socialLinks {
-  display: none; }
-  #socialLinks > a {
-    color: #474747;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 30px;
-    margin: 0px; }
-  @media only screen and (min-width: 598px) {
-    #socialLinks {
-      display: none !important; } }
+.social_icons { float: right; padding: 16px 0px 16px 0px; height: 100%; }
 
-.logo_content {
-  grid-area: logo_content;
-  padding: 100px 37px 62px 0px; }
-  @media only screen and (max-width: 1250px) {
-    .logo_content {
-      padding: 60px 0px 0px 0px; } }
+.social_icons > a > img { width: 25px; height: 25px; display: inline-block; vertical-align: middle; }
 
-.logo {
-  display: flex; }
+@media only screen and (max-width: 598px) { .social_icons { display: none; } }
 
-.logo_svg {
-  height: 144px;
-  width: 169px; }
-  @media only screen and (max-width: 598px) {
-    .logo_svg {
-      height: 62px;
-      width: 73px;
-      margin-top: 34px; } }
+.nav_github_icon, .nav_twitter_icon { padding-right: 44px; }
 
-.logo_text {
-  font-size: 21px;
-  padding-left: 30px;
-  margin-top: 34px; }
-  .logo_text > p {
-    margin: 0px; }
-  @media only screen and (max-width: 745px) {
-    .logo_text {
-      font-size: 18px;
-      line-height: 28px; } }
-  @media only screen and (max-width: 480px) {
-    .logo_text {
-      font-size: 14px;
-      padding-left: 15px; } }
+.nav_slack_icon { padding-right: 27px; }
 
-#kappnav-title {
-  font-size: 72px;
-  font-weight: bold;
-  line-height: 85px;
-  color: #474747; }
-  @media only screen and (max-width: 598px) {
-    #kappnav-title {
-      font-size: 44px;
-      line-height: 42px; } }
+.mobile_menu_button { display: none; height: 38px; width: 54px; border: 1px solid #E5E5E5; border-radius: 2px; float: right; margin: 12px 16px 10px 0px; background-color: #FFFFFF; }
 
-.site_desc {
-  padding: 62px 0px 62px 0px;
-  margin: 0px; }
-  @media only screen and (max-width: 598px) {
-    .site_desc {
-      padding: 34px 0px 34px 0px; } }
+.mobile_menu_button > div { height: 2px; width: 25px; background-color: #979797; margin: 4px 6px 4px 6px; }
 
-.graphic {
-  grid-area: graphic;
-  padding: 123px 0px 62px 118px;
-  text-align: right; }
-  @media only screen and (max-width: 1250px) {
-    .graphic {
-      padding: 60px 0px 0px 0px;
-      justify-self: center;
-      text-align: center; } }
+@media only screen and (max-width: 420px) { .mobile_menu_button > div { margin: 4px 6px 4px 4px; } }
 
-.triangles_svg {
-  height: 364px;
-  width: 480px; }
-  @media only screen and (max-width: 598px) {
-    .triangles_svg {
-      height: 230px;
-      width: 320px; } }
+@media only screen and (max-width: 598px) { .mobile_menu_button { display: block; } }
 
-.button {
-  height: 60px;
-  width: 208px;
-  border-radius: 8px;
-  background-color: #229fd4;
-  text-align: center;
-  letter-spacing: -0.17px;
-  line-height: 56px;
-  text-decoration: none;
-  color: #FFFFFF;
-  padding: 15px 42px; }
-  @media only screen and (max-width: 598px) {
-    .button {
-      height: 50px;
-      width: 190px;
-      line-height: 50px;
-      padding: 12px 32px; } }
-  @media only screen and (max-width: 320px) {
-    .button {
-      height: 33px;
-      width: 115px;
-      line-height: 30px; } }
+#socialLinks { display: none; }
 
-.info {
-  grid-area: info;
-  grid-row: 3/4;
-  grid-column: 2/4;
-  text-align: center;
-  padding: 60px 0px 50px 0px;
-  border-bottom: 1px solid #555555; }
-  .info > p {
-    margin: 0px; }
-  @media only screen and (max-width: 1250px) {
-    .info {
-      grid-row: 4/5;
-      grid-column: 2/3;
-      padding-bottom: 60px; } }
-  @media only screen and (max-width: 598px) {
-    .info {
-      grid-column: 2/3;
-      line-height: 24px; } }
-  .info :first-child {
-    padding-bottom: 30px; }
+#socialLinks > a { color: #474747; padding: 14px 16px; text-decoration: none; font-size: 30px; margin: 0px; }
 
-.customizable {
-  grid-area: customizable;
-  grid-row: 4/5;
-  grid-column: 2/4;
-  display: grid;
-  grid-column-gap: 60px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 185px auto;
-  grid-template-areas: "customizable_title customizable_title customizable_title" "resources actions applications"; }
-  .customizable > div > h3 {
-    font-size: 36px;
-    font-weight: 400;
-    letter-spacing: -0.26px;
-    line-height: 44px;
-    text-align: center; }
-    @media only screen and (max-width: 598px) {
-      .customizable > div > h3 {
-        font-size: 28px;
-        line-height: 21px; } }
-  .customizable > div > p {
-    letter-spacing: -0.17px;
-    text-align: center; }
-  @media only screen and (max-width: 1250px) {
-    .customizable {
-      grid-row: 5/6;
-      grid-column: 2/3;
-      justify-self: center;
-      padding-bottom: 50px; } }
-  @media only screen and (max-width: 1000px) {
-    .customizable {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 100px auto auto;
-      grid-template-areas: "customizable_title customizable_title" "resources actions" "applications applications";
-      grid-column: 2/3;
-      grid-column-gap: 12px; } }
+@media only screen and (min-width: 598px) { #socialLinks { display: none !important; } }
 
-.customizable_title {
-  grid-area: customizable_title;
-  font-size: 60px;
-  font-weight: 400;
-  letter-spacing: -0.43px;
-  line-height: 72px;
-  text-align: center; }
-  @media only screen and (max-width: 1000px) {
-    .customizable_title {
-      grid-row: 1/2;
-      grid-column: 1/3;
-      line-height: 60px;
-      font-size: 50px; } }
-  @media only screen and (max-width: 598px) {
-    .customizable_title {
-      font-size: 36px; } }
+.logo_content { grid-area: logo_content; padding: 100px 37px 62px 0px; }
 
-.resources {
-  grid-area: resources; }
-  @media only screen and (max-width: 598px) {
-    .resources {
-      grid-row: 2/3;
-      grid-column: 1/2; } }
+@media only screen and (max-width: 1250px) { .logo_content { padding: 60px 0px 0px 0px; } }
 
-.actions {
-  grid-area: actions; }
-  @media only screen and (max-width: 598px) {
-    .actions {
-      grid-row: 2/3;
-      grid-column: 2/3; } }
+.logo { display: flex; }
 
-.applications {
-  grid-area: applications; }
-  @media only screen and (max-width: 598px) {
-    .applications {
-      grid-row: 3/4;
-      grid-column: 1/3; } }
+.logo_svg { height: 144px; width: 169px; }
 
-.built_on {
-  grid-area: built_on;
-  grid-row: 5/6;
-  grid-column: 2/4;
-  display: grid;
-  grid-column-gap: 135px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 185px 100px;
-  grid-template-areas: "builton_title builton_title builton_title builton_title" "go kubernetes open_liberty node";
-  text-align: center;
-  padding-bottom: 100px;
-  border-top: 1px solid #555555; }
-  @media only screen and (max-width: 1250px) {
-    .built_on {
-      grid-row: 6/7;
-      grid-column: 2/3;
-      grid-column-gap: 20px;
-      justify-self: center; } }
-  @media only screen and (max-width: 798px) {
-    .built_on {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 100px auto auto;
-      grid-template-areas: "builton_title builton_title" "go kubernetes" "open_liberty node";
-      grid-column: 2/3;
-      grid-column-gap: 12px;
-      grid-row-gap: 30px;
-      padding-bottom: 60px; } }
+@media only screen and (max-width: 598px) { .logo_svg { height: 62px; width: 73px; margin-top: 34px; } }
 
-.builton_title {
-  grid-area: builton_title;
-  color: #474747;
-  font-size: 60px;
-  font-weight: 400;
-  letter-spacing: -0.43px;
-  line-height: 72px;
-  text-align: center; }
-  @media only screen and (max-width: 1000px) {
-    .builton_title {
-      line-height: 60px;
-      font-size: 50px; } }
-  @media only screen and (max-width: 598px) {
-    .builton_title {
-      font-size: 36px;
-      line-height: 38px; } }
+.logo_text { font-size: 21px; padding-left: 30px; margin-top: 34px; }
 
-.go {
-  grid-area: go; }
-  .go > a > img {
-    height: 208px;
-    width: 340px;
-    margin: -50px -68px 0px -66px;
-    /* needed weird margins due to extra whitespace in Go logo file */ }
+.logo_text > p { margin: 0px; }
 
-.kubernetes {
-  grid-area: kubernetes; }
-  .kubernetes > a > img {
-    width: 102px; }
+@media only screen and (max-width: 745px) { .logo_text { font-size: 18px; line-height: 28px; } }
 
-.open_liberty {
-  grid-area: open_liberty; }
-  .open_liberty > a > img {
-    width: 132px;
-    margin-top: -16px; }
+@media only screen and (max-width: 480px) { .logo_text { font-size: 14px; padding-left: 15px; } }
 
-.node {
-  grid-area: node; }
-  .node > a > img {
-    width: 90px; }
+#kappnav-title { font-size: 72px; font-weight: bold; line-height: 85px; color: #474747; }
 
-.footer {
-  grid-area: footer;
-  background-color: #1da766;
-  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.5);
-  text-align: center; }
+@media only screen and (max-width: 598px) { #kappnav-title { font-size: 44px; line-height: 42px; } }
 
-.footer_link {
-  display: inline-block;
-  margin: 10px 0px 10px 0px; }
-  .footer_link > a {
-    color: #FFFFFF;
-    letter-spacing: -0.17px;
-    line-height: 20px;
-    text-decoration: none;
-    font-size: 20px;
-    padding: 8px 20px 8px 20px;
-    display: flex; }
-    @media only screen and (max-width: 598px) {
-      .footer_link > a {
-        font-size: 16px; } }
+.site_desc { padding: 62px 0px 62px 0px; margin: 0px; }
 
-.right_border {
-  border-right: 2px solid #FFFFFF; }
+@media only screen and (max-width: 598px) { .site_desc { padding: 34px 0px 34px 0px; } }
+
+.graphic { grid-area: graphic; padding: 123px 0px 62px 118px; text-align: right; }
+
+@media only screen and (max-width: 1250px) { .graphic { padding: 60px 0px 0px 0px; justify-self: center; text-align: center; } }
+
+.triangles_svg { height: 364px; width: 480px; }
+
+@media only screen and (max-width: 598px) { .triangles_svg { height: 230px; width: 320px; } }
+
+.button { height: 60px; width: 208px; border-radius: 8px; background-color: #229fd4; text-align: center; letter-spacing: -0.17px; line-height: 56px; text-decoration: none; color: #FFFFFF; padding: 15px 42px; }
+
+@media only screen and (max-width: 598px) { .button { height: 50px; width: 190px; line-height: 50px; padding: 12px 32px; } }
+
+@media only screen and (max-width: 320px) { .button { height: 33px; width: 115px; line-height: 30px; } }
+
+.info { grid-area: info; grid-row: 3/4; grid-column: 2/4; text-align: center; padding: 60px 0px 50px 0px; border-bottom: 1px solid #555555; }
+
+.info > p { margin: 0px; }
+
+@media only screen and (max-width: 1250px) { .info { grid-row: 4/5; grid-column: 2/3; padding-bottom: 60px; } }
+
+@media only screen and (max-width: 598px) { .info { grid-column: 2/3; line-height: 24px; } }
+
+.info :first-child { padding-bottom: 30px; }
+
+.customizable { grid-area: customizable; grid-row: 4/5; grid-column: 2/4; display: grid; grid-column-gap: 60px; grid-template-columns: repeat(3, 1fr); grid-template-rows: 185px auto; grid-template-areas: "customizable_title customizable_title customizable_title" "resources actions applications"; }
+
+.customizable > div > h3 { font-size: 36px; font-weight: 400; letter-spacing: -0.26px; line-height: 44px; text-align: center; }
+
+@media only screen and (max-width: 598px) { .customizable > div > h3 { font-size: 28px; line-height: 21px; } }
+
+.customizable > div > p { letter-spacing: -0.17px; text-align: center; }
+
+@media only screen and (max-width: 1250px) { .customizable { grid-row: 5/6; grid-column: 2/3; justify-self: center; padding-bottom: 50px; } }
+
+@media only screen and (max-width: 1000px) { .customizable { grid-template-columns: 1fr 1fr; grid-template-rows: 100px auto auto; grid-template-areas: "customizable_title customizable_title" "resources actions" "applications applications"; grid-column: 2/3; grid-column-gap: 12px; } }
+
+.customizable_title { grid-area: customizable_title; font-size: 60px; font-weight: 400; letter-spacing: -0.43px; line-height: 72px; text-align: center; }
+
+@media only screen and (max-width: 1000px) { .customizable_title { grid-row: 1/2; grid-column: 1/3; line-height: 60px; font-size: 50px; } }
+
+@media only screen and (max-width: 598px) { .customizable_title { font-size: 36px; } }
+
+.resources { grid-area: resources; }
+
+@media only screen and (max-width: 598px) { .resources { grid-row: 2/3; grid-column: 1/2; } }
+
+.actions { grid-area: actions; }
+
+@media only screen and (max-width: 598px) { .actions { grid-row: 2/3; grid-column: 2/3; } }
+
+.applications { grid-area: applications; }
+
+@media only screen and (max-width: 598px) { .applications { grid-row: 3/4; grid-column: 1/3; } }
+
+.built_on { grid-area: built_on; grid-row: 5/6; grid-column: 2/4; display: grid; grid-column-gap: 135px; grid-template-columns: 1fr 1fr 1fr 1fr; grid-template-rows: 185px 100px; grid-template-areas: "builton_title builton_title builton_title builton_title" "go kubernetes open_liberty node"; text-align: center; padding-bottom: 100px; border-top: 1px solid #555555; }
+
+@media only screen and (max-width: 1250px) { .built_on { grid-row: 6/7; grid-column: 2/3; grid-column-gap: 20px; justify-self: center; } }
+
+@media only screen and (max-width: 798px) { .built_on { grid-template-columns: 1fr 1fr; grid-template-rows: 100px auto auto; grid-template-areas: "builton_title builton_title" "go kubernetes" "open_liberty node"; grid-column: 2/3; grid-column-gap: 12px; grid-row-gap: 30px; padding-bottom: 60px; } }
+
+.builton_title { grid-area: builton_title; color: #474747; font-size: 60px; font-weight: 400; letter-spacing: -0.43px; line-height: 72px; text-align: center; }
+
+@media only screen and (max-width: 1000px) { .builton_title { line-height: 60px; font-size: 50px; } }
+
+@media only screen and (max-width: 598px) { .builton_title { font-size: 36px; line-height: 38px; } }
+
+.go { grid-area: go; }
+
+.go > a > img { height: 208px; width: 340px; margin: -50px -68px 0px -66px; /* needed weird margins due to extra whitespace in Go logo file */ }
+
+.kubernetes { grid-area: kubernetes; }
+
+.kubernetes > a > img { width: 102px; }
+
+.open_liberty { grid-area: open_liberty; }
+
+.open_liberty > a > img { width: 132px; margin-top: -16px; }
+
+.node { grid-area: node; }
+
+.node > a > img { width: 90px; }
+
+.footer { grid-area: footer; background-color: #1da766; box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.5); text-align: center; }
+
+.footer_link { display: inline-block; margin: 10px 0px 10px 0px; }
+
+.footer_link > a { color: #FFFFFF; letter-spacing: -0.17px; line-height: 20px; text-decoration: none; font-size: 20px; padding: 8px 20px 8px 20px; display: flex; }
+
+@media only screen and (max-width: 598px) { .footer_link > a { font-size: 16px; } }
+
+.right_border { border-right: 2px solid #FFFFFF; }
+
+/*# sourceMappingURL=main.css.map */
