@@ -5,4 +5,8 @@
     {%- seo -%}
     <link rel="stylesheet" href="{{ 'assets/main.css' | relative_url }}">
     {%- feed_meta -%}
+
+    {% if jekyll.environment == 'production' and site.google_tag_manager_id %}
+        {% include analytics/google_tag_manager_head.html %}
+    {% endif %}
 </head>
