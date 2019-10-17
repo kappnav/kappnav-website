@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="140px" height="218px" viewBox="0 0 140 218" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>Triangle</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-7.4%" y="-12.7%" width="114.7%" height="125.4%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="5" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.2">
+        <g id="Website-v1.0-(October)" transform="translate(-1247.000000, -2023.000000)" fill="#1B93E7" fill-rule="nonzero">
+            <path d="M1327.86915,2077.57152 L1419,2191 L1338.05887,2191 C1335.06775,2191 1332.64297,2189.20991 1332.64297,2187.00175 C1332.64297,2186.475 1332.78395,2185.95345 1333.05783,2185.46706 C1342.39234,2168.88923 1337.03973,2160.60031 1317,2160.60031 C1296.96027,2160.60031 1291.60766,2168.88923 1300.94217,2185.46706 C1302.09028,2187.50609 1300.78196,2189.84615 1298.01996,2190.69373 C1297.3611,2190.89592 1296.65462,2191 1295.94111,2191 L1215,2191 L1306.13085,2077.57152 C1309.69126,2073.13997 1317.44382,2071.67825 1323.44668,2074.30668 C1325.2681,2075.10421 1326.78883,2076.22687 1327.86915,2077.57152 Z" id="Triangle" filter="url(#filter-1)" transform="translate(1317.000000, 2132.000000) scale(1, -1) rotate(270.000000) translate(-1317.000000, -2132.000000) "></path>
+        </g>
+    </g>
+</svg>

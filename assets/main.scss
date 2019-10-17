@@ -11,14 +11,15 @@ html, body {
 
 .main_container {
     display: grid;
-    grid-column-gap: 20px;
-    grid-template-columns: 1fr 598px 598px 1fr;
-    grid-template-rows: 58px auto 320px 540px 385px 58px;
+    grid-template-columns: 100px 1fr 1fr 100px;
+    grid-template-rows: 58px auto auto auto 540px auto 385px 58px;
     grid-template-areas:
     "header  header header header"
     " . logo_content graphic . "
     "info info info info"
+    "after_info_line after_info_line after_info_line after_info_line"
     "customizable  customizable customizable customizable"
+    "after_custom_line after_custom_line after_custom_line after_custom_line"
     "built_on built_on built_on built_on"
     "footer  footer footer footer";
     margin: 0px;
@@ -37,23 +38,27 @@ html, body {
         " . logo_content . "
         " . graphic ."
         " . info . "
+        " . after_info_line . "
         " . customizable . "
+        " . after_custom_line . "
         " . built_on . "
         "footer footer footer";
         grid-template-columns: 80px auto 80px;
-        grid-template-rows: 58px repeat(5, auto) 58px;
+        grid-template-rows: 58px repeat(7, auto) 58px;
         padding: 0px;
     }
 
     @media only screen and (max-width: 698px) {
         grid-template-columns: 20px auto 20px;
-        grid-template-rows: 56px repeat(5, auto) 56px;
+        grid-template-rows: 56px repeat(7, auto) 56px;
         grid-template-areas:
         "header header header"
         " . logo_content . "
         " . graphic . "
         ". info . "
+        " . after_info_line . "
         " . customizable . "
+        " . after_custom_line . "
         " . built_on . "
         "footer footer footer";
         grid-column-gap: 0px;
@@ -171,11 +176,13 @@ html, body {
 
 .logo_content {
     grid-area: logo_content;
-    padding: 100px 37px 62px 0px;
+    padding: 100px 37px 85px 0px;
+    border-bottom: 1px solid #555555;
 
     // single column view
     @media only screen and (max-width: 1250px) {
         padding: 60px 0px 0px 0px;    
+        border: none;
     }
 }
 
@@ -225,6 +232,11 @@ html, body {
     }
 }
 
+.description_link {
+    text-decoration: none;
+    color: #28ABE3;
+}
+
 // for description text under main logo 
 .site_desc {
     padding: 62px 0px 62px 0px;
@@ -238,13 +250,15 @@ html, body {
 // grid area for triangle graphic
 .graphic {
     grid-area: graphic;
-    padding: 123px 0px 62px 118px;
+    padding: 123px 0px 85px 118px;
     text-align: right;
+    border-bottom: 1px solid #555555;
     
     @media only screen and (max-width: 1250px)  {
-        padding: 60px 0px 0px 0px;
+        padding: 60px 0px 60px 0px;
         justify-self: center;
         text-align: center;
+        border: none;
     }
 }
 
@@ -291,9 +305,17 @@ html, body {
     grid-area: info;
     grid-row: 3/4;
     grid-column: 2/4;
-    text-align: center;
-    padding: 60px 0px 50px 0px;
-    border-bottom: 1px solid #555555;
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
+    grid-template-rows: 230px auto auto;
+    grid-template-areas:
+    "info_title info_title info_title"
+    "summary b_arrow kub_kappnav"
+    "code_example g_arrow crd_sig"
+    "kabanero_info y_arrow kabanero_logo"
+    ;
+    text-align: left;
+    padding: 0px 0px 85px 0px;
 
     & > p {
         margin: 0px;
@@ -309,22 +331,111 @@ html, body {
         grid-column: 2/3;
         line-height: 24px;
     }
+}
 
-    // add padding after first <p> element
-    :first-child {
-        padding-bottom: 30px;
+.info_title {
+    grid-area: info_title;
+    font-size: 60px;
+    font-weight: 400;	
+    letter-spacing: -0.43px;	
+    line-height: 130px;
+    text-align: center;
+
+    @media only screen and (max-width: 1000px)  {
+        grid-row: 1/2;
+        grid-column: 1/3;
+        line-height: 60px;
+        font-size: 50px;
+    }
+
+    @media only screen and (max-width: 598px) {
+        font-size: 36px;
+    }
+}
+
+.summary {
+    grid-area: summary;
+}
+
+.b_arrow {
+    grid-area: b_arrow;
+    display: flex;
+    justify-content: center;
+}
+
+.kub_kappnav {
+    grid-area: kub_kappnav;
+    display: flex;
+    justify-content: center;
+
+    & > img {
+        width: 400px;
+        height: 180px;
+    }
+}
+.crd_sig {
+    grid-area: crd_sig;
+}
+
+.g_arrow {
+    grid-area: g_arrow;
+    display: flex;
+    justify-content: center;
+}
+
+.kabanero_info {
+    grid-area: kabanero_info;
+}
+
+.y_arrow {
+    grid-area: y_arrow;
+    display: flex;
+    justify-content: center;
+}
+
+.kabanero_logo {
+    grid-area: kabanero_logo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & > img {
+        width: 500px;
+        height: 80px;
+        
+        @media only screen and (max-width: 1250px)  {
+            width: 400px;
+        }
+    }
+}
+
+.after_info_line {
+    grid-area: after_info_line;
+    grid-row: 4/5;
+    grid-column: 2/4;
+    border-bottom: 1px solid #555555;
+
+    & > img {
+        position: absolute;
+        margin: -110px 0px 0px -50px;
+    }
+
+    @media only screen and (max-width: 1250px)  {
+        grid-row: 5/6;
+        grid-column: 2/3;
+        display: none;
     }
 }
 
 // specify row and columns since it's at grid area
 .customizable {
     grid-area: customizable;
-    grid-row: 4/5;
+    grid-row: 5/6;
     grid-column: 2/4;
     display: grid;
     grid-column-gap: 60px;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 185px auto;
+    grid-template-rows: 200px auto;
     grid-template-areas:
     "customizable_title customizable_title customizable_title"
     "resources actions applications";
@@ -348,10 +459,10 @@ html, body {
     }
 
     @media only screen and (max-width: 1250px)  {
-        grid-row: 5/6;
+        grid-row: 6/7;
         grid-column: 2/3;
         justify-self: center;
-        padding-bottom: 50px;
+        padding-bottom: 60px;
     }
 
     // shift 'applications' area to a new bottom row 
@@ -373,7 +484,7 @@ html, body {
     font-size: 60px;
     font-weight: 400;	
     letter-spacing: -0.43px;	
-    line-height: 72px;
+    line-height: 130px;
     text-align: center;
 
     @media only screen and (max-width: 1000px)  {
@@ -415,24 +526,43 @@ html, body {
     }
 }
 
+.after_custom_line {
+    grid-area: after_custom_line;
+    grid-row: 6/7;
+    grid-column: 2/4;
+    border-bottom: 1px solid #555555;
+    text-align: right;
+    padding-top: 85px;
+
+    & > img {
+        position: absolute;
+        margin: -110px 0px 0px -90px;
+    }
+
+    @media only screen and (max-width: 1250px)  {
+        grid-row: 7/8;
+        grid-column: 2/3;
+        display: none;
+    }
+}
+
 // section with icons of open source we're built on
 .built_on {
     grid-area: built_on;
-    grid-row: 5/6;
+    grid-row: 7/8;
     grid-column: 2/4;
     display: grid;
     grid-column-gap: 135px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 185px 100px;
+    grid-template-rows: 200px 100px;
     grid-template-areas:
     "builton_title builton_title builton_title builton_title"
     "go kubernetes open_liberty node";
     text-align: center;
     padding-bottom: 100px;
-    border-top: 1px solid #555555;
 
     @media only screen and (max-width: 1250px)  {
-        grid-row: 6/7;
+        grid-row: 8/9;
         grid-column: 2/3;
         grid-column-gap: 20px;
         justify-self: center;
