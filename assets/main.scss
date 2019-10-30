@@ -373,14 +373,29 @@ html, body {
         height: 180px;
     }
 }
-.crd_sig {
-    grid-area: crd_sig;
+
+.code_example {
+    grid-area: code_example;
+    display: flex;
+    justify-content: center;
+    padding: 85px;
+
+    & > img {
+        width: 380px;
+        height: 190px;
+    }
 }
 
 .g_arrow {
     grid-area: g_arrow;
     display: flex;
     justify-content: center;
+}
+
+.crd_sig {
+    grid-area: crd_sig;
+    display: flex;
+    align-items: center;
 }
 
 .kabanero_info {
