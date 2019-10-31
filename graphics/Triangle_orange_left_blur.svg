@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="140px" height="219px" viewBox="0 0 140 219" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>Triangle</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-7.4%" y="-12.7%" width="114.7%" height="125.4%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="5" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.2">
+        <g id="Website-v1.0-(October)" transform="translate(-68.000000, -1540.000000)" fill="#F1A446" fill-rule="nonzero">
+            <path d="M149.681574,1594.59931 L240,1707.45628 L159.093261,1707.67189 C156.083497,1707.67989 153.624929,1705.94487 153.601894,1703.79659 C153.596394,1703.2837 153.733059,1702.77549 154.004022,1702.30121 C163.539982,1685.61006 158.258792,1677.29126 138.160453,1677.34482 C118.035139,1677.39845 112.678582,1685.76798 122.090783,1702.4534 C123.216474,1704.44894 121.866101,1706.71164 119.074653,1707.50728 C118.439881,1707.6882 117.762571,1707.78203 117.078149,1707.78386 L36,1708 L127.621861,1594.52281 C131.122556,1590.18707 138.896005,1588.71159 144.984345,1591.22723 C146.939755,1592.03519 148.560919,1593.199 149.681574,1594.59931 Z" id="Triangle" filter="url(#filter-1)" transform="translate(138.000000, 1649.000000) scale(-1, -1) rotate(270.000000) translate(-138.000000, -1649.000000) "></path>
+        </g>
+    </g>
+</svg>
