@@ -1,10 +1,10 @@
 html, body { width: 100%; height: 100%; margin: 0px; }
 
-.main_container { display: grid; grid-column-gap: 20px; grid-template-columns: 1fr 598px 598px 1fr; grid-template-rows: 58px auto 320px 540px 385px 58px; grid-template-areas: "header  header header header" " . logo_content graphic . " "info info info info" "customizable  customizable customizable customizable" "built_on built_on built_on built_on" "footer  footer footer footer"; margin: 0px; min-height: 100%; font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", sans-serif; font-size: 24px; color: #393939; line-height: 29px; }
+.main_container { display: grid; grid-template-columns: 100px 1fr 1fr 100px; grid-template-rows: 58px auto auto auto 540px auto 385px 58px; grid-template-areas: "header  header header header" " . logo_content graphic . " "info info info info" "after_info_line after_info_line after_info_line after_info_line" "customizable  customizable customizable customizable" "after_custom_line after_custom_line after_custom_line after_custom_line" "built_on built_on built_on built_on" "footer  footer footer footer"; margin: 0px; min-height: 100%; font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", sans-serif; font-size: 24px; color: #393939; line-height: 29px; }
 
-@media only screen and (max-width: 1250px) { .main_container { grid-template-areas: "header header header" " . logo_content . " " . graphic ." " . info . " " . customizable . " " . built_on . " "footer footer footer"; grid-template-columns: 80px auto 80px; grid-template-rows: 58px repeat(5, auto) 58px; padding: 0px; } }
+@media only screen and (max-width: 1250px) { .main_container { grid-template-areas: "header header header" " . logo_content . " " . graphic ." " . info . " " . after_info_line . " " . customizable . " " . after_custom_line . " " . built_on . " "footer footer footer"; grid-template-columns: 80px auto 80px; grid-template-rows: 58px repeat(7, auto) 58px; padding: 0px; } }
 
-@media only screen and (max-width: 698px) { .main_container { grid-template-columns: 20px auto 20px; grid-template-rows: 56px repeat(5, auto) 56px; grid-template-areas: "header header header" " . logo_content . " " . graphic . " ". info . " " . customizable . " " . built_on . " "footer footer footer"; grid-column-gap: 0px; font-size: 20px; line-height: 24px; } }
+@media only screen and (max-width: 698px) { .main_container { grid-template-columns: 20px auto 20px; grid-template-rows: 56px repeat(7, auto) 56px; grid-template-areas: "header header header" " . logo_content . " " . graphic . " ". info . " " . after_info_line . " " . customizable . " " . after_custom_line . " " . built_on . " "footer footer footer"; grid-column-gap: 0px; font-size: 20px; line-height: 24px; } }
 
 .header { grid-area: header; background-color: #FFFFFF; box-shadow: 0 -6px 29px rgba(0, 0, 0, 0.5); position: fixed; top: 0; right: 0; left: 0; }
 
@@ -40,9 +40,9 @@ html, body { width: 100%; height: 100%; margin: 0px; }
 
 @media only screen and (min-width: 598px) { #socialLinks { display: none !important; } }
 
-.logo_content { grid-area: logo_content; padding: 100px 37px 62px 0px; }
+.logo_content { grid-area: logo_content; padding: 100px 37px 85px 0px; border-bottom: 1px solid #555555; }
 
-@media only screen and (max-width: 1250px) { .logo_content { padding: 60px 0px 0px 0px; } }
+@media only screen and (max-width: 1250px) { .logo_content { padding: 60px 0px 0px 0px; border: none; } }
 
 .logo { display: flex; }
 
@@ -62,13 +62,15 @@ html, body { width: 100%; height: 100%; margin: 0px; }
 
 @media only screen and (max-width: 598px) { #kappnav-title { font-size: 44px; line-height: 42px; } }
 
+.description_link { text-decoration: none; color: #28ABE3; }
+
 .site_desc { padding: 62px 0px 62px 0px; margin: 0px; }
 
 @media only screen and (max-width: 598px) { .site_desc { padding: 34px 0px 34px 0px; } }
 
-.graphic { grid-area: graphic; padding: 123px 0px 62px 118px; text-align: right; }
+.graphic { grid-area: graphic; padding: 123px 0px 85px 118px; text-align: right; border-bottom: 1px solid #555555; }
 
-@media only screen and (max-width: 1250px) { .graphic { padding: 60px 0px 0px 0px; justify-self: center; text-align: center; } }
+@media only screen and (max-width: 1250px) { .graphic { padding: 60px 0px 60px 0px; justify-self: center; text-align: center; border: none; } }
 
 .triangles_svg { height: 364px; width: 480px; }
 
@@ -80,7 +82,7 @@ html, body { width: 100%; height: 100%; margin: 0px; }
 
 @media only screen and (max-width: 320px) { .button { height: 33px; width: 115px; line-height: 30px; } }
 
-.info { grid-area: info; grid-row: 3/4; grid-column: 2/4; text-align: center; padding: 60px 0px 50px 0px; border-bottom: 1px solid #555555; }
+.info { grid-area: info; grid-row: 3/4; grid-column: 2/4; display: grid; grid-template-columns: 1fr 200px 1fr; grid-template-rows: 230px auto auto; grid-template-areas: "info_title info_title info_title" "summary b_arrow kub_kappnav" "code_example g_arrow crd_sig" "kabanero_info y_arrow kabanero_logo"; text-align: left; padding: 0px 0px 85px 0px; }
 
 .info > p { margin: 0px; }
 
@@ -88,9 +90,45 @@ html, body { width: 100%; height: 100%; margin: 0px; }
 
 @media only screen and (max-width: 598px) { .info { grid-column: 2/3; line-height: 24px; } }
 
-.info :first-child { padding-bottom: 30px; }
+.info_title { grid-area: info_title; font-size: 60px; font-weight: 400; letter-spacing: -0.43px; line-height: 130px; text-align: center; }
 
-.customizable { grid-area: customizable; grid-row: 4/5; grid-column: 2/4; display: grid; grid-column-gap: 60px; grid-template-columns: repeat(3, 1fr); grid-template-rows: 185px auto; grid-template-areas: "customizable_title customizable_title customizable_title" "resources actions applications"; }
+@media only screen and (max-width: 1000px) { .info_title { grid-row: 1/2; grid-column: 1/3; line-height: 60px; font-size: 50px; } }
+
+@media only screen and (max-width: 598px) { .info_title { font-size: 36px; } }
+
+.summary { grid-area: summary; }
+
+.b_arrow { grid-area: b_arrow; display: flex; justify-content: center; }
+
+.kub_kappnav { grid-area: kub_kappnav; display: flex; justify-content: center; }
+
+.kub_kappnav > img { width: 400px; height: 180px; }
+
+.code_example { grid-area: code_example; display: flex; justify-content: center; padding: 85px; }
+
+.code_example > img { width: 380px; height: 190px; }
+
+.g_arrow { grid-area: g_arrow; display: flex; justify-content: center; }
+
+.crd_sig { grid-area: crd_sig; display: flex; align-items: center; }
+
+.kabanero_info { grid-area: kabanero_info; }
+
+.y_arrow { grid-area: y_arrow; display: flex; justify-content: center; }
+
+.kabanero_logo { grid-area: kabanero_logo; display: flex; align-items: center; justify-content: center; }
+
+.kabanero_logo > img { width: 500px; height: 80px; }
+
+@media only screen and (max-width: 1250px) { .kabanero_logo > img { width: 400px; } }
+
+.after_info_line { grid-area: after_info_line; grid-row: 4/5; grid-column: 2/4; border-bottom: 1px solid #555555; }
+
+.after_info_line > img { position: absolute; margin: -110px 0px 0px -50px; }
+
+@media only screen and (max-width: 1250px) { .after_info_line { grid-row: 5/6; grid-column: 2/3; display: none; } }
+
+.customizable { grid-area: customizable; grid-row: 5/6; grid-column: 2/4; display: grid; grid-column-gap: 60px; grid-template-columns: repeat(3, 1fr); grid-template-rows: 200px auto; grid-template-areas: "customizable_title customizable_title customizable_title" "resources actions applications"; }
 
 .customizable > div > h3 { font-size: 36px; font-weight: 400; letter-spacing: -0.26px; line-height: 44px; text-align: center; }
 
@@ -98,11 +136,11 @@ html, body { width: 100%; height: 100%; margin: 0px; }
 
 .customizable > div > p { letter-spacing: -0.17px; text-align: center; }
 
-@media only screen and (max-width: 1250px) { .customizable { grid-row: 5/6; grid-column: 2/3; justify-self: center; padding-bottom: 50px; } }
+@media only screen and (max-width: 1250px) { .customizable { grid-row: 6/7; grid-column: 2/3; justify-self: center; padding-bottom: 60px; } }
 
 @media only screen and (max-width: 1000px) { .customizable { grid-template-columns: 1fr 1fr; grid-template-rows: 100px auto auto; grid-template-areas: "customizable_title customizable_title" "resources actions" "applications applications"; grid-column: 2/3; grid-column-gap: 12px; } }
 
-.customizable_title { grid-area: customizable_title; font-size: 60px; font-weight: 400; letter-spacing: -0.43px; line-height: 72px; text-align: center; }
+.customizable_title { grid-area: customizable_title; font-size: 60px; font-weight: 400; letter-spacing: -0.43px; line-height: 130px; text-align: center; }
 
 @media only screen and (max-width: 1000px) { .customizable_title { grid-row: 1/2; grid-column: 1/3; line-height: 60px; font-size: 50px; } }
 
@@ -120,9 +158,15 @@ html, body { width: 100%; height: 100%; margin: 0px; }
 
 @media only screen and (max-width: 598px) { .applications { grid-row: 3/4; grid-column: 1/3; } }
 
-.built_on { grid-area: built_on; grid-row: 5/6; grid-column: 2/4; display: grid; grid-column-gap: 135px; grid-template-columns: 1fr 1fr 1fr 1fr; grid-template-rows: 185px 100px; grid-template-areas: "builton_title builton_title builton_title builton_title" "go kubernetes open_liberty node"; text-align: center; padding-bottom: 100px; border-top: 1px solid #555555; }
+.after_custom_line { grid-area: after_custom_line; grid-row: 6/7; grid-column: 2/4; border-bottom: 1px solid #555555; text-align: right; padding-top: 85px; }
 
-@media only screen and (max-width: 1250px) { .built_on { grid-row: 6/7; grid-column: 2/3; grid-column-gap: 20px; justify-self: center; } }
+.after_custom_line > img { position: absolute; margin: -110px 0px 0px -90px; }
+
+@media only screen and (max-width: 1250px) { .after_custom_line { grid-row: 7/8; grid-column: 2/3; display: none; } }
+
+.built_on { grid-area: built_on; grid-row: 7/8; grid-column: 2/4; display: grid; grid-column-gap: 135px; grid-template-columns: 1fr 1fr 1fr 1fr; grid-template-rows: 200px 100px; grid-template-areas: "builton_title builton_title builton_title builton_title" "go kubernetes open_liberty node"; text-align: center; padding-bottom: 100px; }
+
+@media only screen and (max-width: 1250px) { .built_on { grid-row: 8/9; grid-column: 2/3; grid-column-gap: 20px; justify-self: center; } }
 
 @media only screen and (max-width: 798px) { .built_on { grid-template-columns: 1fr 1fr; grid-template-rows: 100px auto auto; grid-template-areas: "builton_title builton_title" "go kubernetes" "open_liberty node"; grid-column: 2/3; grid-column-gap: 12px; grid-row-gap: 30px; padding-bottom: 60px; } }
 
