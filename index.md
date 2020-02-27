@@ -32,7 +32,7 @@ layout: default
             <img src="graphics/kAppNav_YAML.svg" alt="Example of yaml file content">
         </div>
         <div class="crd_sig">
-            <p>kAppNav uses the <a class="description_link" href="https://github.com/kubernetes-sigs/application/blob/master/config/crds/app_v1beta1_application.yaml" target="_blank" rel="noopener">Application Custom Resource Definition (CRD)</a> from the <a class="description_link" href="https://github.com/kubernetes-sigs/application" target="_blank" rel="noopener">Kubernetes Application SIG</a> as the basis for describing the applications.</p>
+            <p>kAppNav uses the <a class="description_link" href="https://github.com/kubernetes-sigs/application/blob/master/config/crd/bases/app.k8s.io_applications.yaml" target="_blank" rel="noopener">Application Custom Resource Definition (CRD)</a> from the <a class="description_link" href="https://github.com/kubernetes-sigs/application" target="_blank" rel="noopener">Kubernetes Application SIG</a> as the basis for describing the applications.</p>
         </div>
         <div class="g_arrow">
             <img src="graphics/Triangle_green_left_small.svg" alt="Small green arrow pointing to image on left">
