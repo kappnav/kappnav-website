@@ -67,18 +67,6 @@ html, body {
 
 }
 
-.logo_nav {
-    height: 30px;
-    padding: 16px 0px 15px 53px;
-    display: inline-block;
-    vertical-align: middle;
-
-    @media only screen and (max-width: 598px) {
-        padding: 16px 0px 15px 10px;
-    }
-
-}
-
 // this section shows up sort of like a dropdown that shows up 
 // when the hamburger icon is clicked in mobile view
 #socialLinks {
@@ -88,7 +76,7 @@ html, body {
         color: #474747;
         padding: 14px 16px;
         text-decoration: none;
-        font-size: 30px;
+        font-size: 16px;
         margin: 0px;
     }
 

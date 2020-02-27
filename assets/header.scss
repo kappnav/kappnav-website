@@ -19,30 +19,57 @@
     }
 }
 
-.social_icons {
-    float: right;
-    padding: 16px 0px 16px 0px;
-    height: 100%;
-    & > a > img {
-        width: 25px;
-        height: 25px;
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & .nav__menu {
+
+        &.nav__menu--right img {
+            width: 25px;
+            height: 25px;
+            vertical-align: text-bottom;
+        }
+    }
+
+    & .nav__menu--right {
+        // in mobile view, the social icons are no longer in the header 
+        // they only show up when the hamburger icon is clicked 
+        @media only screen and (max-width: 598px) {
+            display: none;
+        }
+    }
+
+    & .nav__menuitem {
         display: inline-block;
-        vertical-align: middle;
+        font-size: 20px;
+        padding-right: 44px;
+
+        &:first-child {
+            margin-left: 0px;
+        }
+
+        &:last-child {
+            padding-right: 27px;
+        }
     }
 
-    // in mobile view, the social icons are no longer in the header 
-    // they only show up when the hamburger icon is clicked 
+    & a {
+        color: #393939;
+        text-decoration: none;
+    }
+}
+
+.logo_nav {
+    height: 30px;
+    padding: 0px 0px 0px 53px;
+    display: inline-block;
+    vertical-align: middle;
+
     @media only screen and (max-width: 598px) {
-        display: none;
+        padding: 16px 0px 15px 10px;
     }
-}
-
-.nav_github_icon, .nav_twitter_icon {
-    padding-right: 44px;
-}
-
-.nav_slack_icon {
-    padding-right: 27px;
 }
 
 //hamburger icon

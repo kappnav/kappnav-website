@@ -1,24 +1,44 @@
 <header class="header" role="banner">
-    {%- assign default_paths = site.pages | map: "path" -%}
-    {%- assign page_paths = site.header_pages | default: default_paths -%}    
-    {%- if page_paths -%}
-    <a href="https://kappnav.io/" title="Home"><img class="logo_nav" src="graphics/kappnav-logo.svg" alt="Link back to home page"></a>
-    <span class="header_title">kAppNav</span>
-    <span class="social_icons">
-        <a class="nav_github_icon" href="https://github.com/kappnav" target="_blank" rel="noopener" title="Github"><img src="graphics/header-github-icon.svg" alt="Link to GitHub repo"></a>
-        <a class="nav_twitter_icon" href="https://twitter.com/Kabaneroio" target="_blank" rel="noopener" title="Twitter"><img src="graphics/header-twitter-icon.svg" alt="Link to Kabanero Twitter page"></a>
-        <a class="nav_slack_icon" href="https://ibm-cloud-tech.slack.com/messages/CJZCYTD0Q" target="_blank" rel="noopener" title="Slack"><img src="graphics/header-slack-icon.svg" alt="Link to Slack channel"></a>
-    </span>
-    <button class="mobile_menu_button" onclick="showSocialLinks()">
-        <div></div>
-        <div></div>
-        <div></div>
-    </button>
-    <span id="socialLinks">
-        <a class="nav_github_icon" href="https://github.com/kappnav" target="_blank" rel="noopener" title="Github"><img src="graphics/header-github-icon.svg" alt="Link to GitHub repo"></a>
-        <a class="nav_twitter_icon" href="https://twitter.com/Kabaneroio" target="_blank" rel="noopener" title="Twitter"><img src="graphics/header-twitter-icon.svg" alt="Link to Kabanero Twitter page"></a>
-        <a class="nav_slack_icon" href="https://ibm-cloud-tech.slack.com/messages/CJZCYTD0Q" target="_blank" rel="noopener" title="Slack"><img src="graphics/header-slack-icon.svg" alt="Link to Slack channel"></a>
-    </span>
-    {%- endif -%}
+    <nav class="nav">
+        <ul class="nav__menu nav__menu--left">
+            <li class="nav_logo nav__menuitem">
+                <a href="https://kappnav.io/" title="Home">
+                    <img class="logo_nav" src="graphics/kappnav-logo.svg" alt="Link back to home page">
+                </a>
+            </li>
+        </ul>
+        <ul class="nav__menu nav__menu--right">
+            <li class="nav__menuitem">
+                <a href="https://github.com/kappnav/README/blob/master/doc.md" title="kAppNav Documentation">Docs</a>
+            </li>
+            <li class="nav__menuitem">
+                <a href="https://github.com/kappnav" target="_blank" rel="noopener" title="GitHub">
+                    <img src="graphics/header-github-icon.svg" alt="Link to kAppNav GitHub repository">
+                </a>
+            </li>
+            <li class="nav__menuitem">
+                <a href="https://twitter.com/Kabaneroio" target="_blank" rel="noopener" title="Twitter">
+                    <img src="graphics/header-twitter-icon.svg" alt="Link to Kabanero Twitter page">
+                </a>
+            </li>
+            <li class="nav__menuitem">
+                <a href="https://ibm-cloud-tech.slack.com/messages/CJZCYTD0Q" target="_blank" rel="noopener" title="Slack">
+                    <img src="graphics/header-slack-icon.svg" alt="Link to IBM Cloud Technology Slack channel">
+                </a>
+            </li>
+        </ul>
+
+        <span id="socialLinks">
+            <a href="https://github.com/kappnav/README/blob/master/doc.md" title="kAppNav Documentation">Docs</a>
+            <a href="https://github.com/kappnav" target="_blank" rel="noopener" title="Github"><img src="graphics/header-github-icon.svg" alt="Link to GitHub repo"></a>
+            <a href="https://twitter.com/Kabaneroio" target="_blank" rel="noopener" title="Twitter"><img src="graphics/header-twitter-icon.svg" alt="Link to Kabanero Twitter page"></a>
+            <a href="https://ibm-cloud-tech.slack.com/messages/CJZCYTD0Q" target="_blank" rel="noopener" title="Slack"><img src="graphics/header-slack-icon.svg" alt="Link to Slack channel"></a>
+        </span>
+        <button class="mobile_menu_button" onclick="showSocialLinks()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </button>
+    </nav>
 </header>
 <script src="js/main.js"></script>
