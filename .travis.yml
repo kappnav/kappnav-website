@@ -14,7 +14,7 @@ deploy:
   github_token: $GITHUB_TOKEN
   local_dir: _site
   keep_history: true
-  target_branch: master
+  target_branch: gh-pages
   on:
     branch: source
 
@@ -25,4 +25,3 @@ env:
 sudo: false # route your build to the container-based infrastructure for a faster build
 
 cache: bundler # caching bundler gem packages will speed up build
-
