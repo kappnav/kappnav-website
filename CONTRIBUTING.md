@@ -51,7 +51,7 @@ significant exception is work-in-progress PRs. These should be indicated by open
 
 ## Contributor License Agreement
 
-In order for us to merge any of your changes into kAppNav, you need to sign the [Contributor License Agreement](https://cla-assistant.io/kappnav/kappnav.github.io). When you open up a Pull Request for the first time, a bot will comment with a link to the CLA.
+In order for us to merge any of your changes into kAppNav, you need to sign the [Contributor License Agreement](https://cla-assistant.io/kappnav/kappnav-website). When you open up a Pull Request for the first time, a bot will comment with a link to the CLA.
 
 ## Merge approval and release process
 
