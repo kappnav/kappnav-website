@@ -6,37 +6,9 @@ html, body { width: 100%; height: 100%; margin: 0px; }
 
 @media only screen and (max-width: 698px) { .main_container { grid-template-columns: 20px auto 20px; grid-template-rows: 56px repeat(7, auto) 56px; grid-template-areas: "header header header" " . logo_content . " " . graphic . " ". info . " " . after_info_line . " " . customizable . " " . after_custom_line . " " . built_on . " "footer footer footer"; grid-column-gap: 0px; font-size: 20px; line-height: 24px; } }
 
-.header { grid-area: header; background-color: #FFFFFF; box-shadow: 0 -6px 29px rgba(0, 0, 0, 0.5); position: fixed; top: 0; right: 0; left: 0; }
-
-.logo_nav { height: 30px; padding: 16px 0px 15px 53px; display: inline-block; vertical-align: middle; }
-
-@media only screen and (max-width: 598px) { .logo_nav { padding: 16px 0px 15px 10px; } }
-
-.header_title { display: none; vertical-align: middle; }
-
-@media only screen and (max-width: 598px) { .header_title { display: inline; } }
-
-.social_icons { float: right; padding: 16px 0px 16px 0px; height: 100%; }
-
-.social_icons > a > img { width: 25px; height: 25px; display: inline-block; vertical-align: middle; }
-
-@media only screen and (max-width: 598px) { .social_icons { display: none; } }
-
-.nav_github_icon, .nav_twitter_icon { padding-right: 44px; }
-
-.nav_slack_icon { padding-right: 27px; }
-
-.mobile_menu_button { display: none; height: 38px; width: 54px; border: 1px solid #E5E5E5; border-radius: 2px; float: right; margin: 12px 16px 10px 0px; background-color: #FFFFFF; }
-
-.mobile_menu_button > div { height: 2px; width: 25px; background-color: #979797; margin: 4px 6px 4px 6px; }
-
-@media only screen and (max-width: 420px) { .mobile_menu_button > div { margin: 4px 6px 4px 4px; } }
-
-@media only screen and (max-width: 598px) { .mobile_menu_button { display: block; } }
-
 #socialLinks { display: none; }
 
-#socialLinks > a { color: #474747; padding: 14px 16px; text-decoration: none; font-size: 30px; margin: 0px; }
+#socialLinks > a { color: #474747; padding: 14px 16px; text-decoration: none; font-size: 16px; margin: 0px; }
 
 @media only screen and (min-width: 598px) { #socialLinks { display: none !important; } }
 

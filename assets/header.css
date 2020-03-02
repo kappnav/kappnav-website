@@ -1,0 +1,31 @@
+.header { grid-area: header; background-color: #FFFFFF; box-shadow: 0 -6px 29px rgba(0, 0, 0, 0.5); position: fixed; top: 0; right: 0; left: 0; }
+
+.header_title { vertical-align: middle; }
+
+.nav { display: flex; justify-content: space-between; align-items: center; }
+
+.nav .nav__menu.nav__menu--right img { width: 25px; height: 25px; vertical-align: text-bottom; }
+
+@media only screen and (max-width: 598px) { .nav .nav__menu--right { display: none; } }
+
+.nav .nav__menuitem { display: inline-block; font-size: 20px; padding-right: 44px; }
+
+.nav .nav__menuitem:first-child { margin-left: 0px; }
+
+.nav .nav__menuitem:last-child { padding-right: 27px; }
+
+.nav a { color: #393939; text-decoration: none; }
+
+.logo_nav { height: 30px; padding: 0px 0px 0px 53px; display: inline-block; vertical-align: middle; }
+
+@media only screen and (max-width: 598px) { .logo_nav { padding: 16px 0px 15px 10px; } }
+
+.mobile_menu_button { display: none; height: 38px; width: 54px; border: 1px solid #E5E5E5; border-radius: 2px; float: right; margin: 12px 16px 10px 0px; background-color: #FFFFFF; }
+
+.mobile_menu_button > div { height: 2px; width: 25px; background-color: #979797; margin: 4px 6px 4px 6px; }
+
+@media only screen and (max-width: 420px) { .mobile_menu_button > div { margin: 4px 6px 4px 4px; } }
+
+@media only screen and (max-width: 598px) { .mobile_menu_button { display: block; } }
+
+/*# sourceMappingURL=header.css.map */
