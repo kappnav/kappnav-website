@@ -11,12 +11,7 @@
 }
 
 .header_title {
-    display: none;
     vertical-align: middle;
-
-    @media only screen and (max-width: 598px) {
-        display: inline;   
-    }
 }
 
 .nav {
