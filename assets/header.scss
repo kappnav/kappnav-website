@@ -1,0 +1,96 @@
+---
+---
+.header {
+    grid-area: header;
+    background-color: #FFFFFF;
+    box-shadow: 0 -6px 29px rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.header_title {
+    vertical-align: middle;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & .nav__menu {
+
+        &.nav__menu--right img {
+            width: 25px;
+            height: 25px;
+            vertical-align: text-bottom;
+        }
+    }
+
+    & .nav__menu--right {
+        // in mobile view, the social icons are no longer in the header 
+        // they only show up when the hamburger icon is clicked 
+        @media only screen and (max-width: 598px) {
+            display: none;
+        }
+    }
+
+    & .nav__menuitem {
+        display: inline-block;
+        font-size: 20px;
+        padding-right: 44px;
+
+        &:first-child {
+            margin-left: 0px;
+        }
+
+        &:last-child {
+            padding-right: 27px;
+        }
+    }
+
+    & a {
+        color: #393939;
+        text-decoration: none;
+    }
+}
+
+.logo_nav {
+    height: 30px;
+    padding: 0px 0px 0px 53px;
+    display: inline-block;
+    vertical-align: middle;
+
+    @media only screen and (max-width: 598px) {
+        padding: 16px 0px 15px 10px;
+    }
+}
+
+//hamburger icon
+.mobile_menu_button {
+    display: none;
+    height: 38px;	
+    width: 54px;
+    border: 1px solid #E5E5E5;	
+    border-radius: 2px;
+    float: right;
+    margin: 12px 16px 10px 0px;
+    background-color: #FFFFFF;
+
+    & > div {
+        height: 2px;
+        width: 25px;
+        background-color: #979797;
+        margin: 4px 6px 4px 6px;
+
+        @media only screen and (max-width: 420px) {
+            margin: 4px 6px 4px 4px;
+        }
+    }
+
+    // hamburger icon is only shown in mobile view 
+    @media only screen and (max-width: 598px) {
+        display: block;
+    }
+}
